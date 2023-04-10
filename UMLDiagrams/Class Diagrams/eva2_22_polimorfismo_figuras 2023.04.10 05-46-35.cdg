@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="eva2_22_polimorfismo_figuras">
+  <ClassDiagramComponents>
+    <Class name="Circulo1" package="eva2_22_polimorfismo_figuras" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="radio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="radio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRadio" returnType="double" visibility="public"/>
+        <Method name="setRadio" returnType="void" visibility="public">
+          <Argument type="double" name="radio"/>
+        </Method>
+        <Method name="calcularA" returnType="double" visibility="public"/>
+        <Method name="calcularPe" returnType="double" visibility="public"/>
+        <Method name="ImprimirDatos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EVA2_22_polimorfismo_figuras" package="eva2_22_polimorfismo_figuras" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Figuras1" package="eva2_22_polimorfismo_figuras" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="calcularA" returnType="double" visibility="public" isAbstract="true"/>
+        <Method name="calcularPe" returnType="double" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Interface name="MostrarDatos1" package="eva2_22_polimorfismo_figuras" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Methods>
+        <Method name="ImprimirDatos" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Triangulo1" package="eva2_22_polimorfismo_figuras" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="base" type="double" visibility="private"/>
+        <Field name="altura" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="base"/>
+          <Argument type="double" name="altura"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getBase" returnType="double" visibility="public"/>
+        <Method name="setBase" returnType="void" visibility="public">
+          <Argument type="double" name="base"/>
+        </Method>
+        <Method name="getAltura" returnType="double" visibility="public"/>
+        <Method name="setAltura" returnType="void" visibility="public">
+          <Argument type="double" name="altura"/>
+        </Method>
+        <Method name="calcularA" returnType="double" visibility="public"/>
+        <Method name="calcularPe" returnType="double" visibility="public"/>
+        <Method name="ImprimirDatos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="eva2_22_polimorfismo_figuras.Circulo1" target="eva2_22_polimorfismo_figuras.Figuras1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="eva2_22_polimorfismo_figuras.Triangulo1" target="eva2_22_polimorfismo_figuras.Figuras1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
